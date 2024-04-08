@@ -1,3 +1,4 @@
+#![windows_subsystem = "windows"]
 use clipboard_win::{formats, get_clipboard};
 use regex::Regex;
 use std::collections::HashSet;
