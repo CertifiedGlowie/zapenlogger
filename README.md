@@ -1,4 +1,5 @@
 **ZapenLogger** - Advanced Windows Keylogger For Discord
+![image](https://github.com/TheWeaponSmith/zapenlogger/assets/141177562/fc1fd73a-0707-4de2-91e8-df55e88013ca) ![image](https://github.com/TheWeaponSmith/zapenlogger/assets/141177562/0a9af936-643f-4a34-9952-bbf0017a0021)
 
 ***DISCLAIMER***
 
