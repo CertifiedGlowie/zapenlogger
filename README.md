@@ -17,7 +17,10 @@ _I am strictly against using provided code for gaining access to unauthorized in
 
 💳 Detect potential credit card credentials using regex (sequence of three digits, sequence of sixteen digits and double digits divided by "/" symbol)
 
+📺 Shows currently active window name
+
 🦀 Written in rust, which means it's blazingly fast and doesn't need any runtime to execute. You just run the program and it executes, no pyinstaller, no dotnet, no any crap from interpreted/bytecode languages.
+
 
 🪖 **How to get started**
 1. Download rust installer rust from https://www.rust-lang.org/learn/get-started ([DIRECT LINK](https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe))
