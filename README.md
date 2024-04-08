@@ -30,5 +30,6 @@ _I am strictly against using provided code for gaining access to unauthorized in
 4. Open a command prompt in the root directory of the project and type ```cargo build --release``` and you will get compiled exe file in target/release directory
 
 If you face any issues, please describe them in detail on "Issues" page.
+I will also happily accept improvements in the pull requests, feel free to contribute!
 
 **Happy hacking!**
