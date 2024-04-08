@@ -1,0 +1,21 @@
+[package]
+name = "zapenlogger"
+version = "1.4.88"
+edition = "2021"
+authors = ["Adolf Hitler"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clipboard-win = "5.3.0"
+regex = "1.10.4"
+reqwest = { version = "0.12.3", features = ["blocking"] }
+winapi = { version = "0.3.9", features = ["winuser"] }
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = "z"
+strip = true
+panic = "abort"
+debug  = false
