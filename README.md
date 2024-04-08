@@ -19,7 +19,7 @@ _I am strictly against using provided code for gaining access to unauthorized in
 🦀 Written in rust, which means it's blazingly fast and doesn't need any runtime to execute. You just run the program and it executes, no pyinstaller, no dotnet, no any crap from interpreted/bytecode languages.
 
 🪖 **How to get started**
-1. Download rust installer rust from https://www.rust-lang.org/learn/get-started ([DIRECT LINK]: https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe)
+1. Download rust installer rust from https://www.rust-lang.org/learn/get-started ([DIRECT LINK](https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe))
 2. Install rust using downloaded installer (i recommend x86_64-pc-windows-gnu toolchain since compiled with it binaries run almost everywhere):
 ![image](https://github.com/TheWeaponSmith/zapenlogger/assets/141177562/433dde50-ad05-4dce-ba72-f44e045593a9) ![image](https://github.com/TheWeaponSmith/zapenlogger/assets/141177562/e360b304-492a-456c-9cad-aaef752c979a)
 
